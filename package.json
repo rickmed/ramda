@@ -47,6 +47,9 @@
     "browser_test": "testem ci",
     "postbrowser_test": "npm run posttest"
   },
+  "jest": {
+    "testRegex": "test/[a-z]+\\.js$"
+  },
   "dependencies": {},
   "devDependencies": {
     "acorn": "0.9.x",
@@ -60,6 +63,7 @@
     "eslint": "^2.11.0",
     "handlebars": "3.0.x",
     "istanbul": "^0.4.x",
+    "jest": "^18.1.0",
     "js-yaml": "^3.2.5",
     "jsverify": "^0.7.3",
     "mocha": "2.x.x",

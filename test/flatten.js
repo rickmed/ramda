@@ -19,8 +19,10 @@ describe('flatten', function() {
   });
 
   it('handles ridiculously large inputs', function() {
-    this.timeout(10000);
+    var original_timeout = global.jasmine.DEFAULT_TIMEOUT_INTERVAL;
+    global.jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
     eq(R.flatten([new Array(1000000), R.range(0, 56000), 5, 1, 3]).length, 1056003);
+    global.jasmine.DEFAULT_TIMEOUT_INTERVAL = original_timeout;
   });
 
   it('handles array-like objects', function() {
